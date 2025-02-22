@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arduino LED Control</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Arduino LED Control 🚀</h1>
+        
+        <div class="connection-status">
+            <div id="status" class="status-offline">Disconnected</div>
+            <button id="connect" class="connect-btn">Connect to Arduino</button>
+        </div>
+
+        <div class="control-panel">
+            <div class="led-indicator" id="led-indicator"></div>
+            
+            <div class="button-container">
+                <button id="turnOn" class="control-btn on" disabled>Turn On</button>
+                <button id="turnOff" class="control-btn off" disabled>Turn Off</button>
+            </div>
+
+            <div class="slider-container">
+                <label for="brightness">Brightness</label>
+                <input type="range" id="brightness" min="0" max="255" value="255" disabled>
+                <span id="brightness-value">100%</span>
+            </div>
+
+            <div class="effects-container">
+                <button id="blink" class="effect-btn" disabled>Blink</button>
+                <button id="pulse" class="effect-btn" disabled>Pulse</button>
+                <button id="stopEffect" class="effect-btn" disabled>Stop Effect</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
